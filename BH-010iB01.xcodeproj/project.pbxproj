@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10F62991B945391003F9994 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B10F62981B945391003F9994 /* UIView+AutoLayout.m */; };
+		B10F629D1B945494003F9994 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B10F629C1B945494003F9994 /* UIView+Extension.m */; };
 		B1A00C191B9409F100CF3FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C181B9409F100CF3FD4 /* main.m */; };
 		B1A00C1C1B9409F100CF3FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C1B1B9409F100CF3FD4 /* AppDelegate.m */; };
 		B1A00C1F1B9409F100CF3FD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C1E1B9409F100CF3FD4 /* ViewController.m */; };
@@ -14,6 +16,8 @@
 		B1A00C241B9409F100CF3FD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A00C231B9409F100CF3FD4 /* Images.xcassets */; };
 		B1A00C271B9409F100CF3FD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A00C251B9409F100CF3FD4 /* LaunchScreen.xib */; };
 		B1A00C331B9409F100CF3FD4 /* BH_010iB01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C321B9409F100CF3FD4 /* BH_010iB01Tests.m */; };
+		B1A00C451B94319D00CF3FD4 /* UITextField+addStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */; };
+		FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10F62971B945391003F9994 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		B10F62981B945391003F9994 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		B10F629B1B945494003F9994 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B10F629C1B945494003F9994 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		B1A00C131B9409F100CF3FD4 /* BH-010iB01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BH-010iB01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A00C171B9409F100CF3FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A00C181B9409F100CF3FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		B1A00C2C1B9409F100CF3FD4 /* BH-010iB01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BH-010iB01Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A00C311B9409F100CF3FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A00C321B9409F100CF3FD4 /* BH_010iB01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BH_010iB01Tests.m; sourceTree = "<group>"; };
+		B1A00C431B94319D00CF3FD4 /* UITextField+addStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+addStyle.h"; sourceTree = "<group>"; };
+		B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+addStyle.m"; sourceTree = "<group>"; };
+		FFC865491B959BF200B4C2A4 /* rootNavCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootNavCtl.h; sourceTree = "<group>"; };
+		FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootNavCtl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10F629A1B945473003F9994 /* extention */ = {
+			isa = PBXGroup;
+			children = (
+				B10F629B1B945494003F9994 /* UIView+Extension.h */,
+				B10F629C1B945494003F9994 /* UIView+Extension.m */,
+			);
+			name = extention;
+			sourceTree = "<group>";
+		};
 		B1A00C0A1B9409F100CF3FD4 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +102,10 @@
 		B1A00C151B9409F100CF3FD4 /* BH-010iB01 */ = {
 			isa = PBXGroup;
 			children = (
-				B1A00C1A1B9409F100CF3FD4 /* AppDelegate.h */,
-				B1A00C1B1B9409F100CF3FD4 /* AppDelegate.m */,
-				B1A00C1D1B9409F100CF3FD4 /* ViewController.h */,
-				B1A00C1E1B9409F100CF3FD4 /* ViewController.m */,
-				B1A00C201B9409F100CF3FD4 /* Main.storyboard */,
-				B1A00C231B9409F100CF3FD4 /* Images.xcassets */,
-				B1A00C251B9409F100CF3FD4 /* LaunchScreen.xib */,
+				B1A00C3F1B942EB900CF3FD4 /* xib */,
+				B1A00C3E1B942E9300CF3FD4 /* storyBoard */,
+				B1A00C3D1B942E5100CF3FD4 /* class */,
+				B1A00C3C1B942E3C00CF3FD4 /* resources */,
 				B1A00C161B9409F100CF3FD4 /* Supporting Files */,
 			);
 			path = "BH-010iB01";
@@ -117,6 +135,80 @@
 				B1A00C311B9409F100CF3FD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1A00C3C1B942E3C00CF3FD4 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1A00C231B9409F100CF3FD4 /* Images.xcassets */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		B1A00C3D1B942E5100CF3FD4 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				FFC865481B959BAD00B4C2A4 /* rootNavigationController */,
+				B10F629A1B945473003F9994 /* extention */,
+				B1A00C421B942FCF00CF3FD4 /* category */,
+				B1A00C411B942FB100CF3FD4 /* login&register */,
+				B1A00C401B942ED300CF3FD4 /* AppDelegate */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
+		B1A00C3E1B942E9300CF3FD4 /* storyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B1A00C201B9409F100CF3FD4 /* Main.storyboard */,
+			);
+			name = storyBoard;
+			sourceTree = "<group>";
+		};
+		B1A00C3F1B942EB900CF3FD4 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				B1A00C251B9409F100CF3FD4 /* LaunchScreen.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
+		B1A00C401B942ED300CF3FD4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B1A00C1A1B9409F100CF3FD4 /* AppDelegate.h */,
+				B1A00C1B1B9409F100CF3FD4 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B1A00C411B942FB100CF3FD4 /* login&register */ = {
+			isa = PBXGroup;
+			children = (
+				B1A00C1D1B9409F100CF3FD4 /* ViewController.h */,
+				B1A00C1E1B9409F100CF3FD4 /* ViewController.m */,
+			);
+			name = "login&register";
+			sourceTree = "<group>";
+		};
+		B1A00C421B942FCF00CF3FD4 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B10F62971B945391003F9994 /* UIView+AutoLayout.h */,
+				B10F62981B945391003F9994 /* UIView+AutoLayout.m */,
+				B1A00C431B94319D00CF3FD4 /* UITextField+addStyle.h */,
+				B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		FFC865481B959BAD00B4C2A4 /* rootNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				FFC865491B959BF200B4C2A4 /* rootNavCtl.h */,
+				FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */,
+			);
+			name = rootNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10F629D1B945494003F9994 /* UIView+Extension.m in Sources */,
+				B10F62991B945391003F9994 /* UIView+AutoLayout.m in Sources */,
 				B1A00C1F1B9409F100CF3FD4 /* ViewController.m in Sources */,
+				B1A00C451B94319D00CF3FD4 /* UITextField+addStyle.m in Sources */,
 				B1A00C1C1B9409F100CF3FD4 /* AppDelegate.m in Sources */,
+				FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */,
 				B1A00C191B9409F100CF3FD4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +439,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "BH-010iB01/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "BH-010iB01/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +512,7 @@
 				B1A00C381B9409F100CF3FD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1A00C391B9409F100CF3FD4 /* Build configuration list for PBXNativeTarget "BH-010iB01Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +521,7 @@
 				B1A00C3B1B9409F100CF3FD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

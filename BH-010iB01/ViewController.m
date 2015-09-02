@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "UITextField+addStyle.h"
+#import "UIView+Extension.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -17,7 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationController.navigationBar.topItem.title = @"Beacon";
+    [self setNeedsStatusBarAppearanceUpdate];
 }
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

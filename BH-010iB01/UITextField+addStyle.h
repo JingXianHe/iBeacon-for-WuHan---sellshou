@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  UITextField+addStyle.h
 //  BH-010iB01
 //
 //  Created by Tommy on 2015-08-31.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface UITextField (addStyle)
 
-@property (strong, nonatomic) UIWindow *window;
-
++(void)changeStyleToBeiHai:(UITextField *)textField;
 
 @end
-
