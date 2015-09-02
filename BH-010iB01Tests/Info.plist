@@ -22,7 +22,5 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 </dict>
 </plist>
