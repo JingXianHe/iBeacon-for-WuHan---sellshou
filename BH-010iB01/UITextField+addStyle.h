@@ -10,6 +10,6 @@
 
 @interface UITextField (addStyle)
 
-+(void)changeStyleToBeiHai:(UITextField *)textField;
++(void)changeStyleToBeiHai:(UITextField *)textField title:(NSString *)titlename;
 
 @end
