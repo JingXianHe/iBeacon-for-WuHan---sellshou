@@ -18,6 +18,10 @@
 		B1A00C331B9409F100CF3FD4 /* BH_010iB01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C321B9409F100CF3FD4 /* BH_010iB01Tests.m */; };
 		B1A00C451B94319D00CF3FD4 /* UITextField+addStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */; };
 		FF8D52001B96D52B00A9D604 /* JXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D51FF1B96D52B00A9D604 /* JXNetwork.m */; };
+		FF8D52031B96DACE00A9D604 /* registerCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D52021B96DACE00A9D604 /* registerCtl.m */; };
+		FF8D52081B96ED0600A9D604 /* dropdownList.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D52071B96ED0600A9D604 /* dropdownList.m */; };
+		FFB370FD1B9AC4E300720343 /* UIButton+DropdownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */; };
+		FFB370FF1B9AD58D00720343 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB370FE1B9AD58D00720343 /* Homepage.storyboard */; };
 		FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,13 @@
 		B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+addStyle.m"; sourceTree = "<group>"; };
 		FF8D51FE1B96D52B00A9D604 /* JXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXNetwork.h; sourceTree = "<group>"; };
 		FF8D51FF1B96D52B00A9D604 /* JXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXNetwork.m; sourceTree = "<group>"; };
+		FF8D52011B96DACE00A9D604 /* registerCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerCtl.h; sourceTree = "<group>"; };
+		FF8D52021B96DACE00A9D604 /* registerCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registerCtl.m; sourceTree = "<group>"; };
+		FF8D52061B96ED0600A9D604 /* dropdownList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dropdownList.h; sourceTree = "<group>"; };
+		FF8D52071B96ED0600A9D604 /* dropdownList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dropdownList.m; sourceTree = "<group>"; };
+		FFB370FB1B9AC4E300720343 /* UIButton+DropdownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DropdownBtn.h"; sourceTree = "<group>"; };
+		FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DropdownBtn.m"; sourceTree = "<group>"; };
+		FFB370FE1B9AD58D00720343 /* Homepage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
 		FFC865491B959BF200B4C2A4 /* rootNavCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootNavCtl.h; sourceTree = "<group>"; };
 		FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootNavCtl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +162,7 @@
 		B1A00C3D1B942E5100CF3FD4 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				FF8D52041B96ECCC00A9D604 /* global */,
 				FF8D51FD1B96D4B600A9D604 /* internet */,
 				FFC865481B959BAD00B4C2A4 /* rootNavigationController */,
 				B10F629A1B945473003F9994 /* extention */,
@@ -165,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A00C201B9409F100CF3FD4 /* Main.storyboard */,
+				FFB370FE1B9AD58D00720343 /* Homepage.storyboard */,
 			);
 			name = storyBoard;
 			sourceTree = "<group>";
@@ -191,6 +204,8 @@
 			children = (
 				B1A00C1D1B9409F100CF3FD4 /* ViewController.h */,
 				B1A00C1E1B9409F100CF3FD4 /* ViewController.m */,
+				FF8D52011B96DACE00A9D604 /* registerCtl.h */,
+				FF8D52021B96DACE00A9D604 /* registerCtl.m */,
 			);
 			name = "login&register";
 			sourceTree = "<group>";
@@ -202,6 +217,8 @@
 				B10F62981B945391003F9994 /* UIView+AutoLayout.m */,
 				B1A00C431B94319D00CF3FD4 /* UITextField+addStyle.h */,
 				B1A00C441B94319D00CF3FD4 /* UITextField+addStyle.m */,
+				FFB370FB1B9AC4E300720343 /* UIButton+DropdownBtn.h */,
+				FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -213,6 +230,23 @@
 				FF8D51FF1B96D52B00A9D604 /* JXNetwork.m */,
 			);
 			name = internet;
+			sourceTree = "<group>";
+		};
+		FF8D52041B96ECCC00A9D604 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D52051B96ECDD00A9D604 /* view */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
+		FF8D52051B96ECDD00A9D604 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D52061B96ED0600A9D604 /* dropdownList.h */,
+				FF8D52071B96ED0600A9D604 /* dropdownList.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		FFC865481B959BAD00B4C2A4 /* rootNavigationController */ = {
@@ -304,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB370FF1B9AD58D00720343 /* Homepage.storyboard in Resources */,
 				B1A00C221B9409F100CF3FD4 /* Main.storyboard in Resources */,
 				B1A00C271B9409F100CF3FD4 /* LaunchScreen.xib in Resources */,
 				B1A00C241B9409F100CF3FD4 /* Images.xcassets in Resources */,
@@ -325,13 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10F629D1B945494003F9994 /* UIView+Extension.m in Sources */,
+				FF8D52031B96DACE00A9D604 /* registerCtl.m in Sources */,
 				B10F62991B945391003F9994 /* UIView+AutoLayout.m in Sources */,
 				FF8D52001B96D52B00A9D604 /* JXNetwork.m in Sources */,
 				B1A00C1F1B9409F100CF3FD4 /* ViewController.m in Sources */,
 				B1A00C451B94319D00CF3FD4 /* UITextField+addStyle.m in Sources */,
 				B1A00C1C1B9409F100CF3FD4 /* AppDelegate.m in Sources */,
 				FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */,
+				FF8D52081B96ED0600A9D604 /* dropdownList.m in Sources */,
 				B1A00C191B9409F100CF3FD4 /* main.m in Sources */,
+				FFB370FD1B9AC4E300720343 /* UIButton+DropdownBtn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
