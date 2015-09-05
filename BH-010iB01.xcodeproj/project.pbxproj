@@ -22,6 +22,7 @@
 		FF8D52081B96ED0600A9D604 /* dropdownList.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D52071B96ED0600A9D604 /* dropdownList.m */; };
 		FFB370FD1B9AC4E300720343 /* UIButton+DropdownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */; };
 		FFB370FF1B9AD58D00720343 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB370FE1B9AD58D00720343 /* Homepage.storyboard */; };
+		FFB371031B9AF12400720343 /* homeCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB371021B9AF12400720343 /* homeCtl.m */; };
 		FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		FFB370FB1B9AC4E300720343 /* UIButton+DropdownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DropdownBtn.h"; sourceTree = "<group>"; };
 		FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DropdownBtn.m"; sourceTree = "<group>"; };
 		FFB370FE1B9AD58D00720343 /* Homepage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
+		FFB371011B9AF12400720343 /* homeCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeCtl.h; sourceTree = "<group>"; };
+		FFB371021B9AF12400720343 /* homeCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeCtl.m; sourceTree = "<group>"; };
 		FFC865491B959BF200B4C2A4 /* rootNavCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootNavCtl.h; sourceTree = "<group>"; };
 		FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootNavCtl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +165,7 @@
 		B1A00C3D1B942E5100CF3FD4 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				FFB371001B9AF0FD00720343 /* home */,
 				FF8D52041B96ECCC00A9D604 /* global */,
 				FF8D51FD1B96D4B600A9D604 /* internet */,
 				FFC865481B959BAD00B4C2A4 /* rootNavigationController */,
@@ -247,6 +251,15 @@
 				FF8D52071B96ED0600A9D604 /* dropdownList.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		FFB371001B9AF0FD00720343 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				FFB371011B9AF12400720343 /* homeCtl.h */,
+				FFB371021B9AF12400720343 /* homeCtl.m */,
+			);
+			name = home;
 			sourceTree = "<group>";
 		};
 		FFC865481B959BAD00B4C2A4 /* rootNavigationController */ = {
@@ -363,6 +376,7 @@
 				FF8D52031B96DACE00A9D604 /* registerCtl.m in Sources */,
 				B10F62991B945391003F9994 /* UIView+AutoLayout.m in Sources */,
 				FF8D52001B96D52B00A9D604 /* JXNetwork.m in Sources */,
+				FFB371031B9AF12400720343 /* homeCtl.m in Sources */,
 				B1A00C1F1B9409F100CF3FD4 /* ViewController.m in Sources */,
 				B1A00C451B94319D00CF3FD4 /* UITextField+addStyle.m in Sources */,
 				B1A00C1C1B9409F100CF3FD4 /* AppDelegate.m in Sources */,
