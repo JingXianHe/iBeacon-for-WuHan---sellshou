@@ -21,8 +21,9 @@
 		FF8D52031B96DACE00A9D604 /* registerCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D52021B96DACE00A9D604 /* registerCtl.m */; };
 		FF8D52081B96ED0600A9D604 /* dropdownList.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8D52071B96ED0600A9D604 /* dropdownList.m */; };
 		FFB370FD1B9AC4E300720343 /* UIButton+DropdownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */; };
-		FFB370FF1B9AD58D00720343 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB370FE1B9AD58D00720343 /* Homepage.storyboard */; };
 		FFB371031B9AF12400720343 /* homeCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB371021B9AF12400720343 /* homeCtl.m */; };
+		FFBF74351B9BDA5900C31A0D /* bannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBF74331B9BDA5900C31A0D /* bannerCell.m */; };
+		FFBF74361B9BDA5900C31A0D /* bannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFBF74341B9BDA5900C31A0D /* bannerCell.xib */; };
 		FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */; };
 /* End PBXBuildFile section */
 
@@ -64,9 +65,11 @@
 		FF8D52071B96ED0600A9D604 /* dropdownList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dropdownList.m; sourceTree = "<group>"; };
 		FFB370FB1B9AC4E300720343 /* UIButton+DropdownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DropdownBtn.h"; sourceTree = "<group>"; };
 		FFB370FC1B9AC4E300720343 /* UIButton+DropdownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DropdownBtn.m"; sourceTree = "<group>"; };
-		FFB370FE1B9AD58D00720343 /* Homepage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
 		FFB371011B9AF12400720343 /* homeCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeCtl.h; sourceTree = "<group>"; };
 		FFB371021B9AF12400720343 /* homeCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeCtl.m; sourceTree = "<group>"; };
+		FFBF74321B9BDA5900C31A0D /* bannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bannerCell.h; sourceTree = "<group>"; };
+		FFBF74331B9BDA5900C31A0D /* bannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bannerCell.m; sourceTree = "<group>"; };
+		FFBF74341B9BDA5900C31A0D /* bannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bannerCell.xib; sourceTree = "<group>"; };
 		FFC865491B959BF200B4C2A4 /* rootNavCtl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootNavCtl.h; sourceTree = "<group>"; };
 		FFC8654A1B959BF200B4C2A4 /* rootNavCtl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootNavCtl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				B1A00C201B9409F100CF3FD4 /* Main.storyboard */,
-				FFB370FE1B9AD58D00720343 /* Homepage.storyboard */,
 			);
 			name = storyBoard;
 			sourceTree = "<group>";
@@ -256,10 +258,37 @@
 		FFB371001B9AF0FD00720343 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				FFBF74311B9BDA1400C31A0D /* modal */,
+				FFBF74301B9BDA0B00C31A0D /* view */,
+				FFBF742F1B9BDA0300C31A0D /* controller */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		FFBF742F1B9BDA0300C31A0D /* controller */ = {
+			isa = PBXGroup;
+			children = (
 				FFB371011B9AF12400720343 /* homeCtl.h */,
 				FFB371021B9AF12400720343 /* homeCtl.m */,
 			);
-			name = home;
+			name = controller;
+			sourceTree = "<group>";
+		};
+		FFBF74301B9BDA0B00C31A0D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FFBF74321B9BDA5900C31A0D /* bannerCell.h */,
+				FFBF74331B9BDA5900C31A0D /* bannerCell.m */,
+				FFBF74341B9BDA5900C31A0D /* bannerCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		FFBF74311B9BDA1400C31A0D /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modal;
 			sourceTree = "<group>";
 		};
 		FFC865481B959BAD00B4C2A4 /* rootNavigationController */ = {
@@ -351,10 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB370FF1B9AD58D00720343 /* Homepage.storyboard in Resources */,
 				B1A00C221B9409F100CF3FD4 /* Main.storyboard in Resources */,
 				B1A00C271B9409F100CF3FD4 /* LaunchScreen.xib in Resources */,
 				B1A00C241B9409F100CF3FD4 /* Images.xcassets in Resources */,
+				FFBF74361B9BDA5900C31A0D /* bannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +412,7 @@
 				FFC8654B1B959BF200B4C2A4 /* rootNavCtl.m in Sources */,
 				FF8D52081B96ED0600A9D604 /* dropdownList.m in Sources */,
 				B1A00C191B9409F100CF3FD4 /* main.m in Sources */,
+				FFBF74351B9BDA5900C31A0D /* bannerCell.m in Sources */,
 				FFB370FD1B9AC4E300720343 /* UIButton+DropdownBtn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface homeCtl : UIViewController
+@interface homeCtl : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @end
