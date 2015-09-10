@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface rootNavCtl : UINavigationController
-
+#import <CoreLocation/CoreLocation.h>
+@class homeCtl;
+@interface rootNavCtl : UINavigationController<CLLocationManagerDelegate>
+-(void)startRangingBeacons;
+@property(weak,nonatomic)homeCtl *homeDelegate;
 @end

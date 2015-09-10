@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "UITextField+addStyle.h"
 #import "UIView+Extension.h"
+#import "networking4Ibeacon.h"
+#import "AppDelegate.h"
+#import "UIAlertView+PopMsg.h"
+#import "coreData.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
@@ -32,19 +36,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    //[networking4Ibeacon checkUserIDExist:@"a"];
+
     self.navigationController.navigationBar.topItem.title = @"Beacon";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.loginBtn.layer.cornerRadius = 20;
     self.loginBtn.clipsToBounds = YES;
     self.registerBtn.layer.cornerRadius = 20;
+    
     self.loginBtn.clipsToBounds = YES;
     [UITextField changeStyleToBeiHai:self.pwdTxt title:@"密码"];
     [UITextField changeStyleToBeiHai:self.mblTxt title:@"手机"];
     self.isOpenScene = YES;
     self.logoPositionValue = self.beihaiLogo.centerY;
-    self.firstLoad = YES;
-
+    
+    self.mbltextY = self.mblTxt.centerY;
+    self.pwdtextY = self.pwdTxt.centerY;
+    self.mblTxt.centerY = -self.mbltextY;
+    self.pwdTxt.centerY = -self.pwdtextY;
+    
+    self.mblTxt.delegate = self;
+    self.pwdTxt.delegate = self;
 
 }
 
@@ -52,19 +64,16 @@
     if(self.isOpenScene){
         self.navigationController.navigationBarHidden = YES;
     }
+
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    if (self.firstLoad) {
-        self.mbltextY = self.mblTxt.centerY;
-        self.pwdtextY = self.pwdTxt.centerY;
-        self.mblTxt.centerY = -self.mbltextY;
-        self.pwdTxt.centerY = -self.pwdtextY;
-        self.firstLoad = NO;
-    }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
     
+    return YES;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -80,7 +89,7 @@
             
             self.beihaiLogoContainer.hidden = YES;
             
-            [UIView animateWithDuration:0.8 animations:^{
+            [UIView animateWithDuration:1.0 animations:^{
                 self.mblTxt.centerY = self.mbltextY;
                 self.pwdTxt.centerY = self.pwdtextY;
                 self.navigationController.navigationBarHidden = NO;
@@ -91,9 +100,49 @@
             
         }];
     }else{
-        [self performSegueWithIdentifier:@"login2home" sender:self];
+        if ([self.mblTxt.text isEqualToString:@""]) {
+            [UIAlertView popUpMsg:@"错误" Content:@"请填写手机号码"];
+            return;
+        }else{
+            if (![UITextField verifyMobileNum:self.mblTxt.text]) {
+                [UIAlertView popUpMsg:@"错误" Content:@"请填写正确手机号码"];
+                return;
+            }
+        }
+        if ([self.pwdTxt.text isEqualToString:@""]) {
+            [UIAlertView popUpMsg:@"错误" Content:@"请填写密码"];
+            return;
+        }
+        
+        
+        UIView *cover = [UIAlertView showTransit:self.view];
+        [networking4Ibeacon login:self.mblTxt.text Password:self.pwdTxt.text result:^(NSString *data) {
+            if ([data isEqualToString:@"1"]) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [UIAlertView popUpMsg:@"成功" Content:@"登陆成功"];
+                    [coreData saveUserAndPwd:self.mblTxt.text Password:self.pwdTxt.text];
+                    self.mblTxt.text = @"";
+                    self.pwdTxt.text = @"";
+                    [self performSegueWithIdentifier:@"login2home" sender:self];
+                    [cover removeFromSuperview];
+                }];
+                
+            }else{
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [UIAlertView popUpMsg:@"错误" Content:@"登陆失败"];
+                    [cover removeFromSuperview];
+                }];
+                
+            }
+            
+        }];
+
+        
+
     }
 }
+
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 //    TargetViewController *targetVC = (TargetViewController*)segue.destinationViewController;
 //    targetVC.string1 = string1;

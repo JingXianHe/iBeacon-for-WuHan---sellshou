@@ -9,6 +9,7 @@
 #import "homeCtl.h"
 #import "bannerCell.h"
 #import "UIView+Extension.h"
+#import "rootNavCtl.h"
 
 @interface homeCtl ()
 @property (weak, nonatomic) IBOutlet UIImageView *cupounImage;
@@ -47,7 +48,17 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.pageIndicator.numberOfPages = self.highlights.count;
     self.pageIndicator.currentPage = 1;
+    self.navigationItem.hidesBackButton = YES;
+    [self performSelector:@selector(sendTrigger2Root) withObject:self afterDelay:2.0];
     
+    rootNavCtl *root = (rootNavCtl *)self.navigationController;
+    root.homeDelegate = self;
+    
+}
+-(void)sendTrigger2Root{
+    //trigger ranging ibeacon
+    rootNavCtl *rootCtl = (rootNavCtl *)self.navigationController;
+    [rootCtl startRangingBeacons];
 }
 -(void)viewDidAppear:(BOOL)animated{
         [self.myCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2000 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];

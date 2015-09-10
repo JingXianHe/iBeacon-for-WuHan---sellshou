@@ -22,5 +22,7 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>NSLocationAlwaysDescription </key>
+	<string>This app needs your permission to find a hot spot</string>
 </dict>
 </plist>

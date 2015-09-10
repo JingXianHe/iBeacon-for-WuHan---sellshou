@@ -12,4 +12,5 @@
 
 +(void)changeStyleToBeiHai:(UITextField *)textField title:(NSString *)titlename;
 +(void)changeStyleToGreen:(UITextField *)textField title:(NSString *)titlename;
++(BOOL)verifyMobileNum:(NSString *)num;
 @end

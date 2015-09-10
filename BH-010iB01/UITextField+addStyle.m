@@ -51,4 +51,12 @@
     textField.layer.borderColor = [UIColor lightGrayColor].CGColor;
     textField.layer.cornerRadius = 20.0;
 }
+
++(BOOL)verifyMobileNum:(NSString *)num{
+    
+    NSString *regex = @"^[1][0-9][0-9]{9}";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isValid = [predicate evaluateWithObject:num];
+    return isValid;
+}
 @end

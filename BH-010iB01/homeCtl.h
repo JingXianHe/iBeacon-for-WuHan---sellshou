@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface homeCtl : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleView;
 
 @end
